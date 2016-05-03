@@ -18,7 +18,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
-<h1>Version: </h1>
+<h1>Version: 1.0-SNAPSHOT</h1>
 
 <template:addResources type="css" resources="g1CSS.css" />
 <h3>${currentNode.properties['jcr:title'].string}</h3>
