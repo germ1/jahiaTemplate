@@ -20,10 +20,14 @@
 
 <h1>Version: 1.1</h1>
 
+
 <template:addResources type="css" resources="g1CSS.css" />
 <h3>${currentNode.properties['jcr:title'].string}</h3>
 <c:set var="pic" value="${currentNode.properties['image']}"/>
 <c:url value="${pic.node.url}" var="imgUrl"></c:url>
 <img src="${imgUrl}" />
 
-<h3>${currentNode.properties['body'].string}</h3>
+<c:if test="${not empty currentNode.properties['body']}">
+    <h3>${currentNode.properties['body'].string}</h3>
+</c:if>
+

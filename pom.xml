@@ -44,7 +44,8 @@
         please contact the sales department at sales@jahia.com.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.jahia.modules</groupId>
@@ -53,15 +54,17 @@
   </parent>
   <groupId>org.jahia.modules</groupId>
   <artifactId>g1-news</artifactId>
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>G1 News</name>
   <description>This is the custom module (G1 News) for running on a Digital Experience Manager server.</description>
   <scm>
     <connection>scm:git:git@github.com:germ1/jahiaTemplate.git</connection>
     <developerConnection>scm:git:git@github.com:germ1/jahiaTemplate.git</developerConnection>
-    <tag>HEAD</tag>
   </scm>
+  <properties>
+    <jahia-depends>default,bootstrap-components</jahia-depends>
+  </properties>
   <repositories>
     <repository>
       <releases>
@@ -83,9 +86,7 @@
         <artifactId>maven-bundle-plugin</artifactId>
         <extensions>true</extensions>
         <configuration>
-          <instructions>
-            <Jahia-Depends>default</Jahia-Depends>
-          </instructions>
+          <instructions />
         </configuration>
       </plugin>
     </plugins>

@@ -7,7 +7,7 @@
 [g1Mix:g1Components] > jmix:droppableContent mixin
 
 [g1:g1News] > jnt:content, g1Mix:g1Components, mix:title
- - jcr:title (string) scoreboost=3.0
+ - jcr:title (string) mandatory scoreboost=3.0
  - body (string, richtext)
- - image (weakreference, picker[type='image'])
+ - image (weakreference, picker[type='image']) mandatory
 

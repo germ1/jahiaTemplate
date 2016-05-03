@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <g1-news j:dependencies="default"
+        <g1-news j:dependencies="bootstrap-components default"
                j:modulePriority="0"
                j:moduleType="module"
                j:title="G1 News"
@@ -9,7 +9,7 @@
                jcr:primaryType="jnt:module">
                 <sources jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl jmix:sourceControl"
                   jcr:primaryType="jnt:moduleVersionFolder"
-                  j:staticMountPointProviderKey="module-g1-news-1.1">
+                  j:staticMountPointProviderKey="module-g1-news-1.2-SNAPSHOT">
                     <src jcr:mixinTypes="jmix:sourceControl jmix:sourceControl"
                  jcr:primaryType="jnt:folder">
                         <main jcr:mixinTypes="jmix:sourceControl jmix:sourceControl"
@@ -42,13 +42,36 @@
                                  jcr:primaryType="jnt:translation"
                                  jcr:title="G1-news-fullpage"/>
                         <pagecontent jcr:primaryType="jnt:contentList">
-                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
-                            <back jcr:primaryType="jnt:backToParentPage">
-                                <j:translation_fr jcr:language="fr"
-                                       jcr:mixinTypes="mix:title"
-                                       jcr:primaryType="jnt:translation"
-                                       jcr:title="Retour à la page précédente"/>
-                            </back>
+                            <bootstrap-layer-container-rows-a jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                                                    jcr:primaryType="jnt:bootstrapFullComponent"
+                                                    layout="8_4"
+                                                    rowType="predefined">
+                                <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
+                                    <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                    <rich-text jcr:primaryType="jnt:bigText">
+                                        <j:translation_fr jcr:language="fr"
+                                             jcr:primaryType="jnt:translation"
+                                             text="&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xA;&#xA;&lt;hr /&gt;&#xA;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xA;"/>
+                                    </rich-text>
+                                    <retour jcr:primaryType="jnt:backToParentPage">
+                                        <j:translation_fr jcr:language="fr"
+                                             jcr:primaryType="jnt:translation"
+                                             jcr:title="Retour"/>
+                                    </retour>
+                            </bootstrap-layer-container-rows-a>
+                                <bootstrap-layer-container-rows-a-side1 jcr:primaryType="jnt:contentList">
+                                    <commentable-1 j:bindedComponent="/modules/g1-news/templates/g1-news-fullpage/pagecontent/bootstrap-layer-container-rows-a/bootstrap-layer-container-rows-a/main-resource-display"
+                                       jcr:primaryType="jnt:addComment"/>
+                                    <display-comments j:bindedComponent="/modules/g1-news/templates/g1-news-fullpage/pagecontent/bootstrap-layer-container-rows-a/bootstrap-layer-container-rows-a/main-resource-display"
+                                          jcr:primaryType="jnt:commentsList"/>
+                                </bootstrap-layer-container-rows-a-side1>
+                                <back jcr:primaryType="jnt:backToParentPage">
+                                    <j:translation_fr jcr:language="fr"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="Retour à la page précédente"/>
+                                </back>
+                            </bootstrap-layer-container-rows-a>
                         </pagecontent>
                     </g1-news-fullpage>
                 </templates>
