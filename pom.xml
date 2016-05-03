@@ -53,14 +53,14 @@
   </parent>
   <groupId>org.jahia.modules</groupId>
   <artifactId>g1-news</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>G1 News</name>
   <description>This is the custom module (G1 News) for running on a Digital Experience Manager server.</description>
   <scm>
     <connection>scm:git:git@github.com:germ1/jahiaTemplate.git</connection>
     <developerConnection>scm:git:git@github.com:germ1/jahiaTemplate.git</developerConnection>
-    <tag>1_0</tag>
+    <tag>HEAD</tag>
   </scm>
   <repositories>
     <repository>
