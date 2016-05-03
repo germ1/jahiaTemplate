@@ -53,7 +53,7 @@
   </parent>
   <groupId>org.jahia.modules</groupId>
   <artifactId>g1-news</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>bundle</packaging>
   <name>G1 News</name>
   <description>This is the custom module (G1 News) for running on a Digital Experience Manager server.</description>
