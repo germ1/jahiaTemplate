@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+    <modules jcr:primaryType="jnt:modules">
+        <g1-news j:dependencies="default"
+               j:modulePriority="0"
+               j:moduleType="module"
+               j:title="G1 News"
+               jcr:mixinTypes="jmix:hasExternalProviderExtension"
+               jcr:primaryType="jnt:module">
+                <sources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                  jcr:primaryType="jnt:moduleVersionFolder"
+                  j:staticMountPointProviderKey="module-g1-news-1.0-SNAPSHOT">
+                    <src jcr:primaryType="jnt:folder">
+                        <main jcr:primaryType="jnt:folder">
+                            <resources jcr:primaryType="jnt:folder">
+                                <g1_g1News jcr:primaryType="jnt:nodeTypeFolder">
+                                    <html jcr:primaryType="jnt:templateTypeFolder">
+                                        <g1News.jsp jcr:primaryType="jnt:viewFile"/>
+                                    </html>
+                                </g1_g1News>
+                            </resources>
+                        </main>
+                    </src>
+                </sources>
+                
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder"/>
+                <contents jcr:primaryType="jnt:contentFolder"/>
+                <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
+                    <files jcr:primaryType="jnt:folder"/>
+                    <contents jcr:primaryType="jnt:contentFolder"/>
+                    <g1-news-fullpage j:applyOn="g1:g1News"
+                              j:defaultTemplate="true"
+                              j:hiddenTemplate="false"
+                              j:priority="10"
+                              jcr:primaryType="jnt:contentTemplate">
+                        <j:translation_fr jcr:language="fr"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="G1-news-fullpage"/>
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                            <back jcr:primaryType="jnt:backToParentPage">
+                                <j:translation_fr jcr:language="fr"
+                                       jcr:primaryType="jnt:translation"
+                                       jcr:title="Retour à la page précédente"/>
+                            </back>
+                        </pagecontent>
+                    </g1-news-fullpage>
+                </templates>
+                
+            </g1-news>
+    </modules>
+</content>

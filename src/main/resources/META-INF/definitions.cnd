@@ -1,0 +1,13 @@
+<g1 = 'http://www.g1.fr'>
+<g1Mix = 'http://www.g1.fr/mix'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+
+[g1Mix:g1Components] > jmix:droppableContent mixin
+
+[g1:g1News] > jnt:content, g1Mix:g1Components, mix:title
+ - jcr:title (string) scoreboost=3.0
+ - body (string, richtext)
+ - image (weakreference, picker[type='image'])
+
